@@ -12,7 +12,11 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1FF0794F6D9E422883254436 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 122BE036CBE1484C82379F53 /* Poppins-SemiBold.ttf */; };
+		5BCE4F37FAA24B42ADC6CB7C /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CA7A3729B34A46A49F4C130A /* Poppins-Medium.ttf */; };
+		60FFA9E069AA4B239AB46B8E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A428EB26C8645978A524848 /* Poppins-Regular.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-chatly-chatlyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-chatly-chatlyTests.a */; };
+		7744BC79C7AA4240BF07C1EA /* SF-Compact-Display-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4C860D9F3904EA1981C4A08 /* SF-Compact-Display-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		90D3AD6F2A83D4D200E05046 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90D3AD5C2A83D4D200E05046 /* Fontisto.ttf */; };
 		90D3AD702A83D4D200E05046 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90D3AD5D2A83D4D200E05046 /* Octicons.ttf */; };
@@ -33,6 +37,9 @@
 		90D3AD7F2A83D4D200E05046 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90D3AD6C2A83D4D200E05046 /* SimpleLineIcons.ttf */; };
 		90D3AD802A83D4D200E05046 /* FontAwesome6_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90D3AD6D2A83D4D200E05046 /* FontAwesome6_Brands.ttf */; };
 		90D3AD812A83D4D200E05046 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90D3AD6E2A83D4D200E05046 /* MaterialIcons.ttf */; };
+		CC234011A3FA44D6B1364CA0 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1854D1C204A4AA8B65B41C1 /* Poppins-Bold.ttf */; };
+		E43BFE473B804FE58D2D66CA /* SF-Compact-Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F1CB0A8C71749348209C540 /* SF-Compact-Display-Bold.ttf */; };
+		F69501A7BDE340F6B06E46D3 /* SF-Compact-Text-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E300722BC7E40D28F08F428 /* SF-Compact-Text-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,8 @@
 		00E356EE1AD99517003FC87E /* chatlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chatlyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* chatlyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chatlyTests.m; sourceTree = "<group>"; };
+		0F1CB0A8C71749348209C540 /* SF-Compact-Display-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Compact-Display-Bold.ttf"; path = "../src/assets/fonts/SF-Compact-Display-Bold.ttf"; sourceTree = "<group>"; };
+		122BE036CBE1484C82379F53 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* chatly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = chatly/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = chatly/AppDelegate.mm; sourceTree = "<group>"; };
@@ -56,12 +65,14 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = chatly/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = chatly/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-chatly-chatlyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-chatly-chatlyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A428EB26C8645978A524848 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-chatly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatly.debug.xcconfig"; path = "Target Support Files/Pods-chatly/Pods-chatly.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-chatly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatly.release.xcconfig"; path = "Target Support Files/Pods-chatly/Pods-chatly.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-chatly-chatlyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatly-chatlyTests.debug.xcconfig"; path = "Target Support Files/Pods-chatly-chatlyTests/Pods-chatly-chatlyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-chatly.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-chatly.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = chatly/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-chatly-chatlyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatly-chatlyTests.release.xcconfig"; path = "Target Support Files/Pods-chatly-chatlyTests/Pods-chatly-chatlyTests.release.xcconfig"; sourceTree = "<group>"; };
+		8E300722BC7E40D28F08F428 /* SF-Compact-Text-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Compact-Text-Regular.ttf"; path = "../src/assets/fonts/SF-Compact-Text-Regular.ttf"; sourceTree = "<group>"; };
 		90D3AD5C2A83D4D200E05046 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
 		90D3AD5D2A83D4D200E05046 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		90D3AD5E2A83D4D200E05046 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
@@ -81,6 +92,9 @@
 		90D3AD6C2A83D4D200E05046 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		90D3AD6D2A83D4D200E05046 /* FontAwesome6_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome6_Brands.ttf; sourceTree = "<group>"; };
 		90D3AD6E2A83D4D200E05046 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		A4C860D9F3904EA1981C4A08 /* SF-Compact-Display-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SF-Compact-Display-Regular.ttf"; path = "../src/assets/fonts/SF-Compact-Display-Regular.ttf"; sourceTree = "<group>"; };
+		B1854D1C204A4AA8B65B41C1 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		CA7A3729B34A46A49F4C130A /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../src/assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -134,6 +148,21 @@
 			name = chatly;
 			sourceTree = "<group>";
 		};
+		1FB33BB2ADCC4C87B23D299E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1854D1C204A4AA8B65B41C1 /* Poppins-Bold.ttf */,
+				CA7A3729B34A46A49F4C130A /* Poppins-Medium.ttf */,
+				2A428EB26C8645978A524848 /* Poppins-Regular.ttf */,
+				122BE036CBE1484C82379F53 /* Poppins-SemiBold.ttf */,
+				0F1CB0A8C71749348209C540 /* SF-Compact-Display-Bold.ttf */,
+				A4C860D9F3904EA1981C4A08 /* SF-Compact-Display-Regular.ttf */,
+				8E300722BC7E40D28F08F428 /* SF-Compact-Text-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +190,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				1FB33BB2ADCC4C87B23D299E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -329,6 +359,13 @@
 				90D3AD7E2A83D4D200E05046 /* FontAwesome6_Solid.ttf in Resources */,
 				90D3AD722A83D4D200E05046 /* FontAwesome6_Regular.ttf in Resources */,
 				90D3AD812A83D4D200E05046 /* MaterialIcons.ttf in Resources */,
+				CC234011A3FA44D6B1364CA0 /* Poppins-Bold.ttf in Resources */,
+				5BCE4F37FAA24B42ADC6CB7C /* Poppins-Medium.ttf in Resources */,
+				60FFA9E069AA4B239AB46B8E /* Poppins-Regular.ttf in Resources */,
+				1FF0794F6D9E422883254436 /* Poppins-SemiBold.ttf in Resources */,
+				E43BFE473B804FE58D2D66CA /* SF-Compact-Display-Bold.ttf in Resources */,
+				7744BC79C7AA4240BF07C1EA /* SF-Compact-Display-Regular.ttf in Resources */,
+				F69501A7BDE340F6B06E46D3 /* SF-Compact-Text-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
