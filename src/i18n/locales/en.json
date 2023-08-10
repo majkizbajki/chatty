@@ -1,1 +1,10 @@
-{}
+{
+    "errors": {
+        "default": "Error"
+    },
+    "rooms": {
+        "emptyRoomsList": "Empty rooms list",
+        "pressToRefetch": "Unexpected error occured. Click to refetch data.",
+        "rooms": "Rooms"
+    }
+}
