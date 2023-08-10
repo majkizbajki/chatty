@@ -6,9 +6,11 @@ export const GET_ROOM = gql(`
             id
             messages {
                 body
+                id
                 insertedAt
                 user {
                     firstName
+                    id
                     lastName
                 }
             }

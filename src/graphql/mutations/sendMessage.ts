@@ -1,6 +1,6 @@
 import { gql } from '../../__generated__/gql';
 
-export const GET_ROOM = gql(`
+export const POST_SEND_MESSAGE = gql(`
     query SendMessage($body: String!, $roomId: String!) {
         sendMessage($body: String!, $roomId: String!) {
             id

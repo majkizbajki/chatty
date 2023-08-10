@@ -1,15 +1,18 @@
-import { useNavigation } from '@react-navigation/native';
-import { Button } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { RootStackParamList } from '../../navigation/types';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { Screen } from '../../components/templates';
+import { ParentTopBar } from '../../components/organism';
+import { useTranslation } from 'react-i18next';
+import { RoomsTopBarContent } from '../../components/molecules';
+import { ChatRoomsList } from '../../components/organism';
 
 export const RoomsScreen = () => {
-    const { navigate } = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+    const { t } = useTranslation();
 
     return (
-        <SafeAreaView>
-            <Button title="ChatRoomScreen" onPress={() => navigate('ChatRoomScreen')} />
-        </SafeAreaView>
+        <Screen>
+            <ParentTopBar label={t('rooms.rooms')}>
+                <RoomsTopBarContent />
+            </ParentTopBar>
+            <ChatRoomsList />
+        </Screen>
     );
 };
