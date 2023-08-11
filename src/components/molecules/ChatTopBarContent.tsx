@@ -55,7 +55,8 @@ const styles = (colors: CustomColors) =>
         },
         textContainer: {
             flex: 1,
-            marginLeft: 12
+            marginLeft: 12,
+            marginRight: 4
         },
         name: {
             color: colors.darkPlum
