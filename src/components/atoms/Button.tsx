@@ -2,18 +2,27 @@ import { StyleSheet, TouchableOpacity, ViewStyle } from 'react-native';
 import { useAppTheme } from '../../hooks';
 import { CustomColors } from '../../theme/types';
 import { Text } from 'react-native-paper';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 
 interface ButtonProps {
     buttonText: string;
     buttonColor?: string;
     buttonStyle?: ViewStyle;
+    children?: ReactNode;
     disabled?: boolean;
     rippleColor?: string;
     onPress: () => void;
 }
 
-export const Button = ({ buttonText, buttonColor, buttonStyle, disabled, rippleColor, onPress }: ButtonProps) => {
+export const Button = ({
+    buttonText,
+    buttonColor,
+    buttonStyle,
+    children,
+    disabled,
+    rippleColor,
+    onPress
+}: ButtonProps) => {
     const [isPressed, setIsPressed] = useState(false);
 
     const { colors } = useAppTheme();
@@ -28,9 +37,11 @@ export const Button = ({ buttonText, buttonColor, buttonStyle, disabled, rippleC
             onPressOut={() => setIsPressed(false)}
             onPress={onPress}
         >
-            <Text variant="titleMedium" style={style.text}>
-                {buttonText}
-            </Text>
+            {children ?? (
+                <Text variant="titleMedium" style={style.text}>
+                    {buttonText}
+                </Text>
+            )}
         </TouchableOpacity>
     );
 };
