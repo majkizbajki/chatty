@@ -5,16 +5,17 @@ import MaterialIconsIcon from 'react-native-vector-icons/MaterialIcons';
 import { ReactNode } from 'react';
 
 interface ChildTopBarProps {
+    handleNavigation: () => void;
     children?: ReactNode;
 }
 
-export const ChildTopBar = ({ children }: ChildTopBarProps) => {
+export const ChildTopBar = ({ handleNavigation, children }: ChildTopBarProps) => {
     const { colors } = useAppTheme();
 
     return (
         <TopBar>
             <View style={styles.container}>
-                <TouchableOpacity style={styles.navigationButton}>
+                <TouchableOpacity style={styles.navigationButton} onPress={handleNavigation}>
                     <MaterialIconsIcon name="arrow-back-ios" size={24} color={colors.darkPlum} />
                 </TouchableOpacity>
                 <View style={styles.contentContainer}>{children}</View>
