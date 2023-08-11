@@ -12,7 +12,7 @@ export const ChatRoomsList = () => {
     const { t } = useTranslation();
 
     const { data, error, loading } = useQuery(GET_USERS_ROOMS);
-    const { data: userData } = useQuery(GET_USER);
+    const { data: userData, loading: getUserLoading } = useQuery(GET_USER);
 
     const style = styles(colors);
 
@@ -29,7 +29,7 @@ export const ChatRoomsList = () => {
         );
     }
 
-    if (loading) {
+    if (loading || getUserLoading) {
         return (
             <View style={style.errorContainer}>
                 <ActivityIndicator size="large" color={colors.darkPlum} />
