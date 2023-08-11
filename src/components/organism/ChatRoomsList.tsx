@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client';
 import { GET_USER, GET_USERS_ROOMS } from '../../graphql/queries';
 import { FlatList, StyleSheet, View } from 'react-native';
-import { ChatRoomTile } from '../molecules';
+import { ChatRoomTile, Error } from '../molecules';
 import { ActivityIndicator, Text } from 'react-native-paper';
 import { useAppTheme } from '../../hooks';
 import { CustomColors } from '../../theme/types';
@@ -17,16 +17,7 @@ export const ChatRoomsList = () => {
     const style = styles(colors);
 
     if (error) {
-        return (
-            <View style={style.errorContainer}>
-                <Text variant="titleLarge" style={style.error}>
-                    {t('rooms.emptyRoomsList')}
-                </Text>
-                <Text variant="bodyLarge" style={{ ...style.error, marginTop: 8 }}>
-                    {error.message}
-                </Text>
-            </View>
-        );
+        return <Error errorMessage={error.message} title={t('rooms.emptyRoomsList')} />;
     }
 
     if (loading || getUserLoading) {
