@@ -5,12 +5,12 @@ import { useAppTheme } from '../../hooks';
 import { CustomColors } from '../../theme/types';
 import { Text } from 'react-native-paper';
 import { useEffect, useState } from 'react';
-import dayjs from 'dayjs';
 import { useTranslation } from 'react-i18next';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigation/types';
 import Skeleton from '../atoms/Skeleton';
+import { convertTime } from '../../utils';
 
 interface ChatRoomTileProps {
     id: string;
@@ -41,7 +41,7 @@ export const ChatRoomTile = ({ id, userId }: ChatRoomTileProps) => {
 
     useEffect(() => {
         if (roomData?.room?.messages) {
-            const lastMessage = roomData.room.messages[roomData.room.messages.length - 1];
+            const lastMessage = roomData.room.messages[0];
             if (lastMessage?.user?.id !== userId && lastMessage?.id !== lastMessageId && !isNew) {
                 setIsNew(true);
                 setLastMessage(lastMessage?.body);
@@ -49,6 +49,9 @@ export const ChatRoomTile = ({ id, userId }: ChatRoomTileProps) => {
                 setLastMessageSentTime(lastMessage?.insertedAt);
                 return;
             }
+            setLastMessage(lastMessage?.body);
+            setLastMessageId(lastMessage?.id);
+            setLastMessageSentTime(lastMessage?.insertedAt);
         }
     }, [isNew, lastMessageId, roomData?.room?.messages, userId]);
 
@@ -101,8 +104,8 @@ export const ChatRoomTile = ({ id, userId }: ChatRoomTileProps) => {
             <View style={style.contentContainer}>
                 <View style={style.statusContainer}>
                     {isNew && <View style={style.newMessage} />}
-                    {!isNew && roomData?.room?.messages && (
-                        <Text variant="bodySmall">{dayjs(lastMessageSentTime).fromNow()}</Text>
+                    {!isNew && roomData?.room?.messages && lastMessageSentTime && (
+                        <Text variant="bodySmall">{convertTime(lastMessageSentTime)}</Text>
                     )}
                 </View>
                 <Text numberOfLines={1} variant="labelLarge" style={style.chatName}>
@@ -154,6 +157,7 @@ const styles = (colors: CustomColors, isNew: boolean) =>
         },
         chatName: {
             marginRight: 32,
+            width: '80%',
             color: isNew ? colors.white : colors.black
         },
         errorContainer: {
