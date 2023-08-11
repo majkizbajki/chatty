@@ -1,6 +1,5 @@
-import { ChildTopBar } from '../../components/organism';
-import { ChatTopBarContent, Error } from '../../components/molecules';
-import { Screen } from '../../components/templates';
+import { Error } from '../../components/molecules';
+import { Chat, Screen } from '../../components/templates';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { RootStackParamList } from '../../navigation/types';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -48,13 +47,7 @@ export const ChatRoomScreen = () => {
         );
     }
 
-    return (
-        <Screen>
-            <ChildTopBar handleNavigation={() => navigate('RoomsScreen')}>
-                <ChatTopBarContent activeAt="Active now" name={data?.room?.name!} />
-            </ChildTopBar>
-        </Screen>
-    );
+    return <Chat data={data} />;
 };
 
 const styles = StyleSheet.create({
