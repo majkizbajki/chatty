@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "chatly.app"
-               BlueprintName = "chatly"
-               ReferencedContainer = "container:chatly.xcodeproj">
+               BuildableName = "chatty.app"
+               BlueprintName = "chatty"
+               ReferencedContainer = "container:chatty.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "chatlyTests.xctest"
-               BlueprintName = "chatlyTests"
-               ReferencedContainer = "container:chatly.xcodeproj">
+               BuildableName = "chattyTests.xctest"
+               BlueprintName = "chattyTests"
+               ReferencedContainer = "container:chatty.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "chatly.app"
-            BlueprintName = "chatly"
-            ReferencedContainer = "container:chatly.xcodeproj">
+            BuildableName = "chatty.app"
+            BlueprintName = "chatty"
+            ReferencedContainer = "container:chatty.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "chatly.app"
-            BlueprintName = "chatly"
-            ReferencedContainer = "container:chatly.xcodeproj">
+            BuildableName = "chatty.app"
+            BlueprintName = "chatty"
+            ReferencedContainer = "container:chatty.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
