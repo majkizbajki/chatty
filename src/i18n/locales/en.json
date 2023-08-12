@@ -10,5 +10,12 @@
         "emptyRoomsList": "Empty rooms list",
         "pressToRefetch": "Unexpected error occured. Click to refetch data.",
         "rooms": "Rooms"
+    },
+    "signIn": {
+        "email": "e-mail address",
+        "login": "Log in",
+        "password": "password",
+        "welcomeBack": "Welcome back",
+        "welcomeDescription": "Log in and stay in touch with everyone!"
     }
 }

@@ -7,6 +7,7 @@ import { client } from './src/graphql';
 import dayjs from 'dayjs';
 import 'dayjs/plugin/relativeTime';
 import 'dayjs/plugin/isToday';
+import { UserProvider } from './src/context/UserContext';
 
 function App(): JSX.Element {
     var relativeTime = require('dayjs/plugin/relativeTime');
@@ -19,7 +20,9 @@ function App(): JSX.Element {
         <SafeAreaProvider>
             <ThemeProvider>
                 <ApolloProvider client={client}>
-                    <Navigation />
+                    <UserProvider>
+                        <Navigation />
+                    </UserProvider>
                 </ApolloProvider>
             </ThemeProvider>
         </SafeAreaProvider>

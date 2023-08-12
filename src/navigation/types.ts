@@ -1,8 +1,7 @@
-import { ParamListBase } from '@react-navigation/native';
-
-export interface RootStackParamList extends ParamListBase {
+export type RootStackParamList = {
     ChatRoomScreen: {
         roomId: string;
     };
     RoomsScreen: undefined;
-}
+    SignInScreen: undefined;
+};
