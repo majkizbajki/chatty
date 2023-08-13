@@ -15,7 +15,9 @@ The design of the page is based on the custom mockups created in [Figma](https:/
 
 ## How to open the project?
 
-First of all you need to clone the repository. Then open the main folder, switch to main or dev branch and type:
+First of all you need to clone the repository. Then open the main folder, switch to main or dev branch. Add .env file to the main folder (check .env.example file).
+
+In the console type:
 
 ### `yarn start`
 
