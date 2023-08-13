@@ -1,26 +1,15 @@
 import { useFocusEffect } from '@react-navigation/native';
-import { Dimensions, ScrollView, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
-import { AvoidSoftInput, useSoftInputAppliedOffsetChanged } from 'react-native-avoid-softinput';
+import { ScrollView, StyleSheet } from 'react-native';
+import { AvoidSoftInput } from 'react-native-avoid-softinput';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Button } from '../../components/atoms';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../../graphql/mutations';
-import { UserContext } from '../../context/UserContext';
-import EncryptedStorage from 'react-native-encrypted-storage';
-import { useCallback, useContext, useState } from 'react';
+import { useCallback } from 'react';
 import { CustomColors } from '../../theme/types';
 import { useAppTheme } from '../../hooks';
 import { Text } from 'react-native-paper';
 import { useTranslation } from 'react-i18next';
-import IoniconsIcon from 'react-native-vector-icons/Ionicons';
+import { SignInForm } from '../../components/organism';
 
 export const SignInScreen = () => {
-    const [isPasswordHidden, setIsPasswordHidden] = useState(true);
-
-    const [signIn] = useMutation(LOGIN_USER, {
-        variables: { email: 'mike.hannigan@mail.com', password: 'dFQ3JvIo0CNdKFS' }
-    });
-    const { updateToken } = useContext(UserContext);
     const { colors } = useAppTheme();
     const { t } = useTranslation();
 
@@ -36,14 +25,6 @@ export const SignInScreen = () => {
     }, []);
 
     useFocusEffect(onFocusEffect);
-
-    const handleSignIn = async () => {
-        const response = await signIn();
-        if (response.data?.loginUser?.token) {
-            await EncryptedStorage.setItem('user_token', response.data?.loginUser?.token);
-            updateToken(response.data?.loginUser?.token);
-        }
-    };
 
     return (
         <SafeAreaView edges={['bottom', 'left', 'right', 'top']} style={style.screen}>
@@ -61,39 +42,7 @@ export const SignInScreen = () => {
                 <Text variant="headlineMedium" style={style.welcomeDescription}>
                     {t('signIn.welcomeDescription')}
                 </Text>
-                <View style={style.formContainer}>
-                    <View style={style.inputContainer}>
-                        <Text variant="labelLarge" style={style.inputLabel}>
-                            {t('signIn.email')}
-                        </Text>
-                        <TextInput style={style.textInput} />
-                    </View>
-                    <View style={style.inputContainer}>
-                        <Text variant="labelLarge" style={style.inputLabel}>
-                            {t('signIn.password')}
-                        </Text>
-                        <View style={style.passwordContainer}>
-                            <TextInput style={style.textInput} />
-                            <TouchableOpacity
-                                style={style.eye}
-                                onPress={() => setIsPasswordHidden(state => (state = !state))}
-                            >
-                                <IoniconsIcon
-                                    name={isPasswordHidden ? 'eye-off' : 'eye'}
-                                    color={colors.darkGrey}
-                                    size={32}
-                                />
-                            </TouchableOpacity>
-                        </View>
-                    </View>
-                </View>
-                <View style={style.submitButtonContainer}>
-                    <Button
-                        onPress={handleSignIn}
-                        buttonText={t('signIn.login')}
-                        buttonStyle={{ width: Dimensions.get('window').width - 32 }}
-                    />
-                </View>
+                <SignInForm />
             </ScrollView>
         </SafeAreaView>
     );
